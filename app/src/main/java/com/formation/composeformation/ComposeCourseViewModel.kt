@@ -15,10 +15,10 @@ class ComposeCourseViewModel @Inject constructor(
     observeAppPreferencesUseCase: ObserveAppPreferencesUseCase
 ) : ViewModel() {
 
-    val preferences: StateFlow<AppPreferences> = observeAppPreferencesUseCase()
+    val preferences: StateFlow<AppPreferences?> = observeAppPreferencesUseCase()
         .stateIn(
             scope = viewModelScope,
             started = SharingStarted.Lazily,
-            initialValue = AppPreferences()
+            initialValue = null
         )
 }

@@ -1,13 +1,12 @@
 package com.formation.composeformation.ui.day_1
 
+import android.annotation.SuppressLint
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.slideOutVertically
-import androidx.compose.foundation.layout.consumeWindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.Home
@@ -66,6 +65,7 @@ enum class NavigationBarItems(
     )
 }
 
+@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 fun ComposeCourseDay1App() {
     val navController = rememberNavController()
@@ -114,9 +114,6 @@ fun ComposeCourseDay1App() {
         }
     ) {
         NavHost(
-            modifier = Modifier
-                .padding(it)
-                .consumeWindowInsets(it),
             navController = navController,
             startDestination = HomePageRoute
         ) {

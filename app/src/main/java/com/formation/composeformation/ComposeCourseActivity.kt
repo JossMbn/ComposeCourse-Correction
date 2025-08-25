@@ -12,6 +12,7 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.formation.composeformation.designsystem.theme.ComposeFormationTheme
+import com.formation.composeformation.domain.common.model.AppTheme
 import com.formation.composeformation.ui.day_1.ComposeCourseDay1App
 import com.formation.composeformation.ui.day_2.onboarding.OnBoardingRoot
 import dagger.hilt.android.AndroidEntryPoint
@@ -23,10 +24,14 @@ class ComposeCourseActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        installSplashScreen()
+        val splashScreen = installSplashScreen()
 
         setContent {
             val preferences by viewModel.preferences.collectAsStateWithLifecycle()
+
+            splashScreen.setKeepOnScreenCondition {
+                preferences?.isOnBoardingCompleted == null
+            }
 
             enableEdgeToEdge(
                 navigationBarStyle = SystemBarStyle.dark(
@@ -35,9 +40,9 @@ class ComposeCourseActivity : ComponentActivity() {
             )
 
             ComposeFormationTheme(
-                theme = preferences.theme
+                theme = preferences?.theme ?: AppTheme.System
             ) {
-                if (preferences.isOnBoardingCompleted) {
+                if (preferences?.isOnBoardingCompleted ?: false) {
                     ComposeCourseDay1App()
                 } else {
                     OnBoardingRoot()

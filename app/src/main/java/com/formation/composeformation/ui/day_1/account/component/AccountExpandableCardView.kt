@@ -19,7 +19,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -35,10 +35,8 @@ fun AccountExpandableCardView(
     title: String,
     content: @Composable ColumnScope.() -> Unit
 ) {
-    var isExpanded by remember(false) { mutableStateOf(false) }
-    val rotation by animateFloatAsState(
-        targetValue = if (isExpanded) 180f else 0f
-    )
+    var isExpanded by rememberSaveable { mutableStateOf(false) }
+    val rotation by animateFloatAsState(targetValue = if (isExpanded) 180f else 0f)
 
     Column(
         modifier = modifier
@@ -46,7 +44,7 @@ fun AccountExpandableCardView(
             .clip(shape = RoundedCornerShape(6.dp))
             .background(MaterialTheme.colorScheme.surfaceVariant)
             .clickable(onClick = { isExpanded = !isExpanded })
-            .padding(12.dp),
+            .padding(vertical = 18.dp, horizontal = 16.dp),
         verticalArrangement = Arrangement.spacedBy(10.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {

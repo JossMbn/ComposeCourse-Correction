@@ -30,7 +30,7 @@ fun AccountItemView(
             .clip(shape = RoundedCornerShape(6.dp))
             .background(MaterialTheme.colorScheme.surfaceVariant)
             .clickable(onClick = onClick)
-            .padding(12.dp),
+            .padding(vertical = 18.dp, horizontal = 14.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(10.dp)
     ) {
