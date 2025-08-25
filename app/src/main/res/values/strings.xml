@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ComposeFormation</string>
+    <string name="my_full_name">Josselin MABILON</string>
+    <string name="developer_at">Developer at</string>
+    <string name="company_name">SQLI</string>
+    <string name="puppy_list">Puppy list</string>
+    <string name="dev_full_name">Josselin MABILON</string>
+    <string name="dev_email">jmabilon@sqli.com</string>
+</resources>

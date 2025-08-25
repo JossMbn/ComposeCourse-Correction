@@ -1,0 +1,96 @@
+[versions]
+# Android
+agp = "8.12.1"
+kotlin = "2.2.10"
+coreKtx = "1.17.0"
+lifecycleRuntimeKtx = "2.9.2"
+datastore = "1.1.7"
+coreSplashscreen = "1.0.1"
+
+# Compose
+activityCompose = "1.10.1"
+composeBom = "2025.08.00"
+composeNavigation = "2.9.3"
+
+# Hilt
+hilt = "2.57.1"
+hiltNavigation = "1.2.0"
+
+# KSP
+ksp = "2.2.0-2.0.2"
+
+# Ktor
+ktor = "3.2.3"
+
+# Coil3
+coil = "2.7.0"
+
+[libraries]
+# Android
+androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "coreKtx" }
+androidx-lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-datastore = { group = "androidx.datastore", name = "datastore", version.ref = "datastore" }
+androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "coreSplashscreen" }
+
+# Compose
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
+androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "composeNavigation" }
+androidx-compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
+androidx-ui = { module = "androidx.compose.ui:ui" }
+androidx-foundation = { module = "androidx.compose.foundation:foundation" }
+androidx-ui-graphics = { module = "androidx.compose.ui:ui-graphics" }
+androidx-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
+androidx-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
+androidx-material3 = { module = "androidx.compose.material3:material3" }
+
+# Hilt (DI)
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
+hilt-navigation = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigation" }
+hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt" }
+
+# Ktor
+ktor-bom = { module = "io.ktor:ktor-bom", version.ref = "ktor" }
+ktor-client-core = { module = "io.ktor:ktor-client-core" }
+ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp" }
+ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation" }
+ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json" }
+
+# Coil
+coil = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+
+[bundles]
+androidx = [
+    "androidx-core-ktx",
+    "androidx-lifecycle-viewmodel-ktx",
+    "androidx-lifecycle-runtime-ktx",
+    "androidx-datastore",
+    "androidx-core-splashscreen"
+]
+compose = [
+    "androidx-ui",
+    "androidx-foundation",
+    "androidx-ui-graphics",
+    "androidx-ui-tooling",
+    "androidx-ui-tooling-preview",
+    "androidx-material3",
+    "androidx-navigation-compose"
+]
+hilt = [
+    "hilt-android",
+    "hilt-navigation"
+]
+ktor = [
+    "ktor-client-core",
+    "ktor-client-okhttp",
+    "ktor-client-content-negotiation",
+    "ktor-serialization-kotlinx-json"
+]
