@@ -8,7 +8,7 @@ plugins {
 }
 
 android {
-    namespace = "com.formation.composeformation"
+    namespace = "com.formation.composecourse"
     compileSdk = 36
 
     defaultConfig {

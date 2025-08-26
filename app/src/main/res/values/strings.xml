@@ -7,4 +7,12 @@
     <string name="dev_full_name">Josselin MABILON</string>
     <string name="dev_email">jmabilon@sqli.com</string>
     <string name="common_account">Account</string>
+    <string name="common_next">Next</string>
+    <string name="common_start">Start</string>
+    <string name="on_boarding_iron_man_title">If You Looking For The Latest Movies</string>
+    <string name="on_boarding_iron_man_subtitle">You are at the right place</string>
+    <string name="on_boarding_batman_title">Welcome To My Movie App</string>
+    <string name="on_boarding_batman_subtitle">We have a wide range of tv shows, series and movies to watch</string>
+    <string name="on_boarding_dune_title">Only With Us, Only For You</string>
+    <string name="on_boarding_dune_subtitle">Are you ready to watch?</string>
 </resources>

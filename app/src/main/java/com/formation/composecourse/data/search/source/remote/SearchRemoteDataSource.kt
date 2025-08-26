@@ -1,0 +1,41 @@
+package com.formation.composecourse.data.search.source.remote
+
+import com.formation.composecourse.data.search.source.remote.endpoint.GetSearchByQueryEndPoint
+import com.formation.composecourse.data.search.source.remote.endpoint.GetSearchDiscoveryEndPoint
+import com.formation.composecourse.data.utils.LanguageCode
+import com.formation.composecourse.domain.movie.model.MovieDataDomain
+import com.formation.composecourse.domain.search.model.SearchDataDomain
+import javax.inject.Inject
+
+interface SearchRemoteDataSource {
+
+    suspend fun getSearchByQuery(
+        query: String,
+        language: LanguageCode = LanguageCode.EN_US,
+        page: Int = 1
+    ): Result<SearchDataDomain>
+
+    suspend fun getSearchDiscovery(): Result<MovieDataDomain>
+}
+
+class SearchRemoteDataSourceImpl @Inject constructor(
+    private val getSearchByQueryEndPoint: GetSearchByQueryEndPoint,
+    private val getSearchDiscoveryEndPoint: GetSearchDiscoveryEndPoint
+) : SearchRemoteDataSource {
+
+    override suspend fun getSearchByQuery(
+        query: String,
+        language: LanguageCode,
+        page: Int
+    ): Result<SearchDataDomain> {
+        return getSearchByQueryEndPoint(
+            query = query,
+            language = language,
+            page = page
+        )
+    }
+
+    override suspend fun getSearchDiscovery(): Result<MovieDataDomain> {
+        return getSearchDiscoveryEndPoint()
+    }
+}
