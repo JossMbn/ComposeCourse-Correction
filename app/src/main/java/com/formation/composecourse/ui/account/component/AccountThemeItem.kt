@@ -27,7 +27,7 @@ import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.formation.composecourse.R
-import com.formation.composecourse.designsystem.theme.ComposeFormationTheme
+import com.formation.composecourse.designsystem.theme.ComposeCourseTheme
 import com.formation.composecourse.domain.common.model.AppTheme
 
 @Composable
@@ -85,7 +85,7 @@ fun AccountThemeItem(
 @Preview
 @Composable
 private fun AccountThemeItemPreview() {
-    ComposeFormationTheme {
+    ComposeCourseTheme {
         AccountThemeItem(
             modifier = Modifier.background(MaterialTheme.colorScheme.surface),
             selected = true,

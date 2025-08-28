@@ -29,7 +29,7 @@ import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.formation.composecourse.designsystem.theme.ComposeFormationTheme
+import com.formation.composecourse.designsystem.theme.ComposeCourseTheme
 import com.formation.composecourse.domain.movie.model.MovieDomain
 import com.formation.composecourse.domain.search.model.SearchDomain
 import com.formation.composecourse.ui.component.MainPageLazyColumn
@@ -221,7 +221,7 @@ fun LazyListScope.searchSectionView(
 @PreviewLightDark
 @Composable
 private fun SearchPagePreview() {
-    ComposeFormationTheme {
+    ComposeCourseTheme {
         SearchPage(
             state = SearchState(),
             onAction = {},

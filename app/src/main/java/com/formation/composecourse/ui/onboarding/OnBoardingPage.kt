@@ -19,7 +19,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.formation.composecourse.R
-import com.formation.composecourse.designsystem.theme.ComposeFormationTheme
+import com.formation.composecourse.designsystem.theme.ComposeCourseTheme
 import com.formation.composecourse.ui.onboarding.component.OnBoardingFooterView
 import com.formation.composecourse.ui.onboarding.component.OnBoardingPosterView
 import com.formation.composecourse.ui.onboarding.component.SkipButton
@@ -99,7 +99,7 @@ private fun OnBoardingPage(
 private fun OnBoardingPagePreview(
     @PreviewParameter(OnBoardingMockProvider::class) state: OnBoardingState
 ) {
-    ComposeFormationTheme {
+    ComposeCourseTheme {
         OnBoardingPage(
             state = state,
             onAction = {}

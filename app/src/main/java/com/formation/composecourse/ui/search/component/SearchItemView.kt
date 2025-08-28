@@ -24,7 +24,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
-import com.formation.composecourse.designsystem.theme.ComposeFormationTheme
+import com.formation.composecourse.designsystem.theme.ComposeCourseTheme
 
 @Stable
 @Composable
@@ -105,7 +105,7 @@ fun VoteAverageView(
 @Preview
 @Composable
 private fun SearchItemViewPreview() {
-    ComposeFormationTheme {
+    ComposeCourseTheme {
         SearchItemView(
             modifier = Modifier
                 .fillMaxWidth()

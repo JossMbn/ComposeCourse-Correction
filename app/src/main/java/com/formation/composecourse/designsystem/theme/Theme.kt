@@ -48,7 +48,7 @@ private val darkScheme = darkColorScheme(
 )
 
 @Composable
-fun ComposeFormationTheme(
+fun ComposeCourseTheme(
     theme: AppTheme = AppTheme.System,
     content: @Composable () -> Unit
 ) {

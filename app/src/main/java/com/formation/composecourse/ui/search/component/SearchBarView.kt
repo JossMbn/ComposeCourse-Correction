@@ -14,7 +14,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.formation.composecourse.designsystem.theme.ComposeFormationTheme
+import com.formation.composecourse.designsystem.theme.ComposeCourseTheme
 
 @Composable
 fun SearchBarView(
@@ -58,7 +58,7 @@ fun SearchBarView(
 @Preview
 @Composable
 private fun SearchBarViewPreview() {
-    ComposeFormationTheme {
+    ComposeCourseTheme {
         SearchBarView(
             value = "Search for a movie, tv show or person",
             onValueChange = {}

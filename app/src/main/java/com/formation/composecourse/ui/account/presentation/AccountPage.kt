@@ -35,7 +35,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.formation.composecourse.R
 import com.formation.composecourse.designsystem.component.HeaderView
-import com.formation.composecourse.designsystem.theme.ComposeFormationTheme
+import com.formation.composecourse.designsystem.theme.ComposeCourseTheme
 import com.formation.composecourse.domain.common.model.AppTheme
 import com.formation.composecourse.ui.account.component.AccountExpandableCardView
 import com.formation.composecourse.ui.account.component.AccountItemView
@@ -211,7 +211,7 @@ fun AppThemeBottomSheetContent(
 private fun AccountPagePreview() {
     var theme by remember { mutableStateOf(AppTheme.System) }
 
-    ComposeFormationTheme(theme = theme) {
+    ComposeCourseTheme(theme = theme) {
         AccountPage(
             state = AccountState(
                 theme = theme

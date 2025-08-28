@@ -12,7 +12,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.formation.composecourse.R
-import com.formation.composecourse.designsystem.theme.ComposeFormationTheme
+import com.formation.composecourse.designsystem.theme.ComposeCourseTheme
 
 @Composable
 fun OnBoardingPosterView(
@@ -38,7 +38,7 @@ fun OnBoardingPosterView(
 @Preview
 @Composable
 private fun OnBoardingPosterViewPreview() {
-    ComposeFormationTheme {
+    ComposeCourseTheme {
         OnBoardingPosterView(
             modifier = Modifier.fillMaxSize(),
             posterId = R.drawable.iron_man_poster

@@ -49,7 +49,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil.compose.AsyncImage
 import com.formation.composecourse.designsystem.component.HeaderView
-import com.formation.composecourse.designsystem.theme.ComposeFormationTheme
+import com.formation.composecourse.designsystem.theme.ComposeCourseTheme
 import com.formation.composecourse.designsystem.utils.RemoveDefaultPadding
 import com.formation.composecourse.ui.detail.component.ExpandableText
 import com.formation.composecourse.ui.detail.component.PersonLayoutView
@@ -328,7 +328,7 @@ fun MovieDetailsPage(state: MovieDetailsState, lazyListState: LazyListState) {
 @Preview
 @Composable
 private fun MovieDetailsPagePreview() {
-    ComposeFormationTheme {
+    ComposeCourseTheme {
         MovieDetailsPage(
             state = MovieDetailsState(),
             lazyListState = rememberLazyListState()

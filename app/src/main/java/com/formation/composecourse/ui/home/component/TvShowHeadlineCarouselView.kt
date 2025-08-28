@@ -33,7 +33,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
-import com.formation.composecourse.designsystem.theme.ComposeFormationTheme
+import com.formation.composecourse.designsystem.theme.ComposeCourseTheme
 import com.formation.composecourse.domain.tvshow.model.TvShowDetailsDomain
 import java.time.LocalDate
 
@@ -123,7 +123,7 @@ fun TvShowHeadlineCarouselView(
 @Preview
 @Composable
 private fun TvShowHeadlineCarouselViewPreview() {
-    ComposeFormationTheme {
+    ComposeCourseTheme {
         TvShowHeadlineCarouselView(
             modifier = Modifier.background(MaterialTheme.colorScheme.background),
             headlineTvShow = TvShowDetailsDomain(

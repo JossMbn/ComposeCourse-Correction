@@ -19,7 +19,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.formation.composecourse.designsystem.theme.ComposeFormationTheme
+import com.formation.composecourse.designsystem.theme.ComposeCourseTheme
 import com.formation.composecourse.ui.component.MainPageLazyColumn
 import com.formation.composecourse.ui.home.component.CarouselSectionView
 import com.formation.composecourse.ui.home.component.HomeHeaderView
@@ -247,7 +247,7 @@ private fun LazyListScope.tvShowsSectionView(
 @Preview
 @Composable
 private fun HomePagePreview() {
-    ComposeFormationTheme {
+    ComposeCourseTheme {
         HomePage(
             state = HomeState(),
             onAction = {},

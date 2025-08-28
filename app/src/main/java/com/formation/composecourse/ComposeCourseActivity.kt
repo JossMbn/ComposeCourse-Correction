@@ -11,7 +11,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.formation.composecourse.designsystem.theme.ComposeFormationTheme
+import com.formation.composecourse.designsystem.theme.ComposeCourseTheme
 import com.formation.composecourse.domain.common.model.AppTheme
 import com.formation.composecourse.ui.ComposeCourseApp
 import com.formation.composecourse.ui.onboarding.OnBoardingRoot
@@ -39,7 +39,7 @@ class ComposeCourseActivity : ComponentActivity() {
                 )
             )
 
-            ComposeFormationTheme(
+            ComposeCourseTheme(
                 theme = preferences?.theme ?: AppTheme.System
             ) {
                 if (preferences?.isOnBoardingCompleted ?: false) {

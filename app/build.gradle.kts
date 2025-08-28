@@ -12,7 +12,7 @@ android {
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.formation.composeformation"
+        applicationId = "com.formation.composecourse"
         minSdk = 30
         targetSdk = 36
         versionCode = 1
